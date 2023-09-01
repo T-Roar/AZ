@@ -100,7 +100,6 @@ resource "azurerm_route_table" "custom_route_table" {
   resource_group_name = azurerm_resource_group.arg.name
 }
 
-# Define custom routes individually
 resource "azurerm_route" "route1" {
   name                = "route1"
   resource_group_name = azurerm_resource_group.arg.name
@@ -109,4 +108,3 @@ resource "azurerm_route" "route1" {
   next_hop_type       = "VirtualAppliance"  # Change this based on your setup
   next_hop_in_ip_address = "10.0.5.0"   # Specify the appropriate next hop IP address for the virtual appliance
 }
-
