@@ -58,7 +58,7 @@ resource "azurerm_network_interface" "nic" {
     subnet_id = azurerm_subnet.sub.id
 
     private_ip_address_allocation = "Static"
-    private_ip_address           = "10.0.0.10"  # Replace with a valid private IP address
+    private_ip_address            = "10.0.0.10" # Replace with a valid private IP address
   }
 }
 
@@ -101,10 +101,10 @@ resource "azurerm_route_table" "custom_route_table" {
 }
 
 resource "azurerm_route" "route1" {
-  name                = "route1"
-  resource_group_name = azurerm_resource_group.arg.name
-  route_table_name    = azurerm_route_table.custom_route_table.name
-  address_prefix      = "0.0.0.0/0"  # This is a default route, you can modify it as needed
-  next_hop_type       = "VirtualAppliance"  # Change this based on your setup
-  next_hop_in_ip_address = "10.0.5.0"   # Specify the appropriate next hop IP address for the virtual appliance
+  name                   = "route1"
+  resource_group_name    = azurerm_resource_group.arg.name
+  route_table_name       = azurerm_route_table.custom_route_table.name
+  address_prefix         = "0.0.0.0/0"        # This is a default route, you can modify it as needed
+  next_hop_type          = "VirtualAppliance" # Change this based on your setup
+  next_hop_in_ip_address = "10.0.5.0"         # Specify the appropriate next hop IP address for the virtual appliance
 }

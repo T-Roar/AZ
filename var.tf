@@ -17,3 +17,13 @@ variable "network" {
   type    = string
   default = "tpvnet"
 }
+
+variable "storage_account_name" {
+  type    = string
+  default = "tpstorage123"
+}
+
+variable "storage_container_name" {
+  type    = string
+  default = "tom84"
+}
